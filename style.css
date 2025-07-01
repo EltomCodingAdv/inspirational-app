@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #FFDAB9, #FFA07A, #FF7F50); /* Peach, Light Salmon, Coral - warm and happy */
+    background: linear-gradient(135deg, #FFDAB9, #FFA07A, #FF7F50);
     color: #333;
     text-align: center;
     padding: 20px;
@@ -13,44 +13,80 @@ body {
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background for content */
-    padding: 30px 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem; /* Using relative units */
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Flexible width */
+    max-width: 800px; /* Max width for large screens */
+    margin: 20px auto; /* Centered with vertical spacing */
 }
 
 h1 {
-    font-size: 2.5em;
-    color: #D2691E; /* Chocolate color for heading */
-    margin-bottom: 25px;
+    font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font size */
+    color: #D2691E;
+    margin-bottom: 1.5rem;
 }
 
 button {
-    background-color: #FF6347; /* Tomato color for button */
+    background-color: #FF6347;
     color: white;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
+    padding: 0.8rem 1.5rem; /* Relative padding */
+    font-size: clamp(1rem, 3vw, 1.2rem); /* Responsive font */
     border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background-color: #E5533D; /* Darker Tomato on hover */
+    background-color: #E5533D;
     transform: translateY(-2px);
 }
 
 button:active {
     transform: translateY(1px);
-    background-color: #D2691E; /* Chocolate color when active/pressed */
+    background-color: #D2691E;
 }
 
 #complimentText {
-    margin-top: 30px;
-    font-size: 1.5em;
+    margin-top: 1.5rem;
+    font-size: clamp(1.1rem, 3vw, 1.5rem); /* Responsive font */
     color: #555;
-    min-height: 50px; /* Reserve space for compliment to avoid layout shift */
+    min-height: 50px;
     line-height: 1.6;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem; /* Smaller padding on mobile */
+        width: 95%; /* More width usage */
+    }
+    
+    button {
+        padding: 0.7rem 1.2rem; /* Slightly smaller button */
+        width: 100%; /* Full-width button on mobile */
+    }
+}
+
+/* Tablet landscape and desktop */
+@media (min-width: 768px) {
+    .container {
+        padding: 2.5rem; /* More padding on larger screens */
+    }
+}
+
+/* In your CSS */
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Quicksand:wght@400;700&display=swap');
+
+h1, .compliment-text {
+  font-family: 'Heart Warming', 'Sacramento', cursive;
+  font-size: 2.8rem;
+  color: #D2691E; /* Warm chocolate tone */
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
 }
