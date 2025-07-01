@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FFDAB9, #FFA07A, #FF7F50); /* Peach, Light Salmon, Coral - warm and happy */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background for content */
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #D2691E; /* Chocolate color for heading */
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #FF6347; /* Tomato color for button */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #E5533D; /* Darker Tomato on hover */
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+    background-color: #D2691E; /* Chocolate color when active/pressed */
+}
+
+#complimentText {
+    margin-top: 30px;
+    font-size: 1.5em;
+    color: #555;
+    min-height: 50px; /* Reserve space for compliment to avoid layout shift */
+    line-height: 1.6;
+}
