@@ -1,8 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
     const complimentButton = document.getElementById('complimentButton');
     const complimentTextElement = document.getElementById('complimentText');
-    let compliments = []; // Initialize as empty, will be populated from JSON
-
+    let compliments = [
+        "Your positivity is infectious! ☀️",
+        "You bring out the best in other people. ✨",
+        "You make a bigger impact than you realize. 🌍",
+        "You're a smart cookie! 🍪",
+        "You are awesome! 🤩",
+        "I bet you make babies smile. 😊",
+        "You have a great sense of humor! 😂",
+        "You're more helpful than you realize. 🙏",
+        "You're so thoughtful. 🤔💖",
+        "Your kindness is a balm to all who encounter it. 🌷",
+        "You're braver than you believe. 🦁",
+        "You are making a difference. 🌟",
+        "You're like a ray of sunshine on a cloudy day. 🌦️➡️☀️",
+        "You have the best laugh. 😄",
+        "You light up the room.💡",
+        "You deserve a hug right now. 🤗",
+        "You're a great listener. 👂💬",
+        "You're inspiring! 💫",
+        "You're one of a kind! 🦄",
+        "If cartoon bluebirds were real, a bunch of them would be sitting on your shoulders singing right now. 🐦🎶",
+        "You're a true gem. 💎",
+        "Your creativity is remarkable. 🎨",
+        "You make my day brighter. 🌞",
+        "You have a heart of gold. 💛",
+        "You're doing great! 👍"
+    ]
+    
     async function loadCompliments() {
         try {
             const response = await fetch('compliments.json');
@@ -11,13 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             compliments = await response.json();
             if (compliments.length === 0) {
-                complimentTextElement.textContent = "No compliments loaded. The list might be empty! 🤔";
+                complimentTextElement.textContent = "Wait Click The Button For Your Message 🤔";
                 return;
             }
             displayInitialCompliment(); // Display one after loading
         } catch (error) {
             console.error("Could not load compliments:", error);
-            complimentTextElement.textContent = "Could not load compliments. Please try again later. 😞";
+            complimentTextElement.textContent = "Wait Click The Button For Your Message 🤔";
         }
     }
 
