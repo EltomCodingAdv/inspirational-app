@@ -117,7 +117,7 @@ body {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
-    .links-container {
+.links-container {
     display: flex;
     flex-direction: column; /* Stack links vertically */
     align-items: center; /* Center links horizontally */
