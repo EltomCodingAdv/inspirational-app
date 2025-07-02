@@ -90,3 +90,29 @@ h1, .compliment-text {
 body {
   font-family: 'Quicksand', sans-serif;
 }
+
+.links-container {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center links horizontally */
+    margin-top: 20px; /* Add spacing above the links */
+}
+
+.link-button {
+    display: inline-block;
+    margin: 10px 0; /* Add spacing between links */
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #ff6f61;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.link-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
